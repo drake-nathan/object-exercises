@@ -25,6 +25,15 @@ Starter Code :
 */
 
 function transformEmployeeData(array) {
-  // your code here
+    const empList = [];
 
+    for (emp of array) {
+        let obj = {};
+        for (arr of emp) {
+            obj[arr[0]] = arr[1];
+        }
+        empList.push(obj);
+    }
+
+    return empList;
 }
